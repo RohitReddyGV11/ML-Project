@@ -10,6 +10,11 @@ def save_obj(file_path,obj):
         dill.dump(obj,file_obj)
 
 
+def load_obj(file_path):
+    with open(file_path,"rb") as file_obj:
+        return dill.load(file_obj)
+
+
 def evaluate_models(X_train,y_train,X_test,y_test,models):
     report = {}
 
